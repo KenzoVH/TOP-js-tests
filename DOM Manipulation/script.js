@@ -9,6 +9,8 @@ container.appendChild(content);
 */
 
 const container = document.querySelector('#container');
+const btn = document.querySelector('#btn');
+const buttons = document.querySelectorAll('#btn')
 
 // Adding a <p> with red text that says "Hey I'm red!"
 let paragraph = document.createElement('p');
@@ -33,3 +35,36 @@ paragraph.textContent = "ME TOO!";
 div.appendChild(h1);
 div.appendChild(paragraph);
 container.appendChild(div);
+
+// Adding event to button to alert "Hello World" (Method 2)
+// btn.onclick = () => alert("Hello World");
+
+// Method 3
+// btn.addEventListener('click', () => {
+//     alert("Hello World");
+// });
+
+// Testing piece of code to see output
+// btn.addEventListener('click', function (e) {
+//     console.log(e);
+//   });
+// Logs info about event
+
+// Further variations of test code
+// btn.addEventListener('click', function (e) {
+//     console.log(e.target);
+//   });
+// Returns what button was pressed (button#btn)
+
+// Last variation of test code
+// btn.addEventListener('click', function (e) {
+//     e.target.style.background = 'blue';
+//   });
+// Turns button blue when clicked
+
+// Add event to every button on page
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
+});
