@@ -8,6 +8,7 @@ content.textContent = 'This is the glorious text-content!';
 container.appendChild(content);
 */
 
+// Declaring the necessary selectors
 const container = document.querySelector('#container');
 const btn = document.querySelector('#btn');
 const buttons = document.querySelectorAll('#btn')
